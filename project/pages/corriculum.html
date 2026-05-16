@@ -1,0 +1,1357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Curriculum</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f7ff;
+        padding: 60px 20px;
+      }
+
+      .curriculum-section {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .curriculum-section h1 {
+        font-size: 42px;
+        color: #1f2a56;         
+        margin-bottom: 15px;
+      }
+
+      .curriculum-section p {
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* justify-content: space-between; */
+        /* gap: 10px; */
+      }
+
+      .card {
+        height: 450px;
+        width: 300px;
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+        margin-left: 35px;
+    
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        width: 150px;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        /* margin-bottom: 15px; */
+        color: #1f2a56;
+      }
+      .card h3 {
+        margin-top: 7px;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 25px;
+      }
+
+      .skills {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+
+      .skills li {
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #4f7cff;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #345de6;
+      }
+      .ngcu {
+        background-color: #d3dded;
+        background: linear-gradient(
+          to right,
+          rgb(209, 209, 241),
+          rgb(243, 243, 248)
+        );
+        height: 70px;
+        text-align: center;
+        padding: 10px;
+      }
+      .for-test {
+        margin-top: 30px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+      }
+      .divide {
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+      }
+      .ngtest {
+        justify-content: left;
+        margin-top: 20px;
+        padding: 40px;
+        /* background-color: #345de6; */
+        width: 500px;
+        text-align: start;
+      }
+      .ngtest h3 {
+        margin-bottom: 10px;
+      }
+      .testpass {
+        width: 400px;
+        border-radius: 20px;
+        height: 250px;
+        margin-top: 20px;
+      }
+      #pghd {
+        padding: 20px;
+        background-color: #dee1ea;
+        margin-bottom: 60px;
+      }
+      #sob{
+        text-decoration: none;
+        margin-left: 0px;
+      }
+
+
+
+
+
+      .webdev-main-section{
+      max-width:1300px;
+      margin:auto;
+    }
+
+    /* Heading */
+
+    .webdev-main-title{
+      text-align:center;
+      font-size:52px;
+      color:#162447;
+      font-weight:bold;
+      margin-bottom:15px;
+    }
+
+    .webdev-main-subtitle{
+      text-align:center;
+      color:#666;
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:60px;
+    }
+
+    /* Grid */
+
+    .webdev-phase-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+      gap:30px;
+    }
+
+    /* Card */
+
+    .webdev-phase-card{
+      background:white;
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+      border-top:8px solid #4da6ff;
+    }
+
+    .webdev-phase-card:hover{
+      transform:translateY(-10px);
+    }
+
+    /* Icon */
+
+    .webdev-phase-icon{
+      width:80px;
+      height:80px;
+      border-radius:20px;
+      background:#edf5ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:38px;
+      margin-bottom:22px;
+    }
+
+    /* Phase */
+
+    .webdev-phase-title{
+      font-size:30px;
+      color:#162447;
+      margin-bottom:18px;
+      font-weight:bold;
+    }
+
+    .webdev-phase-description{
+      color:#666;
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    /* Skill Box */
+
+    .webdev-skill-box{
+      background:#f8fbff;
+      border-radius:16px;
+      padding:18px;
+      margin-bottom:18px;
+      border:1px solid #dbe8ff;
+    }
+
+    .webdev-skill-title{
+      font-size:18px;
+      color:#163172;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    ul{
+      padding-left:20px;
+      line-height:1.8;
+      color:#555;
+      font-size:15px;
+    }
+
+    /* Project */
+
+    .webdev-project-box{
+      background:#edf8ef;
+      padding:15px;
+      border-radius:14px;
+      margin-top:18px;
+      color:#2d6a4f;
+      font-size:15px;
+      line-height:1.8;
+      font-weight:600;
+    }
+
+    @media(max-width:768px){
+
+      body{
+        padding:20px;
+      }
+
+      .webdev-main-title{
+        font-size:36px;
+      }
+
+      .webdev-phase-title{
+        font-size:25px;
+      }
+
+    }
+    .webdev-main-section{
+        background-color: rgb(232, 232, 232);
+        margin-top: 50px;
+        padding: 60px;
+        border-radius: 40px;
+        margin-bottom: 50px;
+    }
+    .fashion-main-section{
+        background-color: rgb(232, 232, 232);
+        margin-top: 50px;
+        padding: 60px;
+        border-radius: 40px;
+        margin-bottom: 50px;
+    }
+    #School-of-Business{
+        background-color:  rgb(232, 232, 232);
+        margin-top: 50px;
+        padding: 60px;
+        border-radius: 40px;
+    }
+    
+    
+    </style>
+  </head>
+
+  <body>
+    <section class="curriculum-section">
+      <h1 class="ngcu">Our Curriculum</h1>
+
+      <p class="ngcu">
+        Explore industry-focused programs designed to build technical, creative,
+        and business skills for future career success.
+      </p>
+      <h3>
+        This is a fully residential 12-18 months where the student will be
+        trained in Software Engineering/Graphic
+        Designing/Management/Finance/Education, Communication and Life Skills.
+      </h3>
+
+      <div class="for-test">
+        <h2>Think about "how can i join navgurukul".</h2>
+
+        <div class="divide">
+          <div class="ngtest">
+            <h3>NavGurukul Scholarship Test</h3>
+            <p>
+              To join NavGurukul, students need to log in to the NavGurukul
+              portal and complete the admission test available on the Admission
+              Test page. Candidates who successfully pass the test will receive
+              a call for the next steps in the admission process.
+            </p>
+            <a href="https://join.navgurukul.org/">Test link</a>
+          </div>
+
+          <img
+            class="testpass"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6TzBfMZ0R-IIGvoylC8eGuavZZABj_0ej6Q&s"
+            alt=""
+          />
+        </div>
+      </div>
+      <h1 id="pghd">NavGurukul Career-Focused Curriculum</h1>
+
+      <div class="card-container">
+        <!-- Web Development Card -->
+
+
+
+        <!-- <a href="#Web-Development" id="sob" class="fix"> -->
+            <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbPZQbet9IGeGU0Mn6cbFjNPrl9Brk1A47Q&s"
+            alt="Web Development"
+          />
+
+          <h2>Web Development</h2>
+          <h3>School of Program(SOP)</h3>
+
+          <p>
+            Learn modern frontend and backend technologies to build responsive
+            and dynamic websites.
+          </p>
+
+          
+
+          <a href="#Web-Development" class="btn">Learn More</a>
+        </div>
+
+        <!-- </a> -->
+        
+
+        <!-- Fashion Design Card -->
+
+        <!-- <a href="" class="fix"> -->
+            <div class="card">
+          <img
+            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cloth-boutique-logo%2Cclothing-fashion-logo%2Conl-design-template-99e1c7592616c51b0fecfb098499a937_screen.jpg?ts=1689099499"
+            alt="Fashion Design"
+          />
+
+          <h2>Fashion Design</h2>
+          <h3>School of Second Chance(SOSC)</h3>
+
+          <p>
+            Explore creativity through garment designing, styling, fashion
+            illustration, and textiles.
+          </p>
+
+    
+
+          <a href="#SOSC" class="btn">Learn More</a>
+        </div>
+        <!-- </a> -->
+
+        
+
+        <!-- Business Card -->
+
+        <!-- <a href="#School-of-Business" id="sob" class="fix"> -->
+          <div class="card">
+            <img
+              src="https://img.pikbest.com/png-images/20240729/world-best-premium-business-logo-design-with-leaf_10687857.png!w700wp"
+              alt="Business"
+            />
+
+            <h2>Business</h2>
+            <h3>School of Business(SOB)</h3>
+
+            <p>
+              Build leadership and entrepreneurship skills with modern business
+              and marketing concepts.
+            </p>
+
+            
+
+            <a href="#School-of-Business" class="btn">Learn More</a>
+          </div>
+        <!-- </a> -->
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="webdev-main-section" id="Web-Development">
+
+  <!-- Heading -->
+
+  <h1 class="webdev-main-title">
+    Full Stack Web Development Curriculum
+  </h1>
+
+  <p class="webdev-main-subtitle">
+    Learn HTML, CSS, JavaScript, Backend, APIs, AI,
+    Databases, and Full Stack Development through real-world projects.
+  </p>
+
+  <!-- Grid -->
+
+  <div class="webdev-phase-grid">
+
+    <!-- Phase 1 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        🏗️
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 1 - HTML
+      </h2>
+
+      <p class="webdev-phase-description">
+        Learn the structure of websites using only HTML
+        and create multi-page websites.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>HTML tags & elements</li>
+          <li>Forms & tables</li>
+          <li>Multi-page websites</li>
+          <li>Website structure</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Project: Student Profile & Course Portal
+      </div>
+
+    </div>
+
+    <!-- Phase 2 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        🎨
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 2 - CSS
+      </h2>
+
+      <p class="webdev-phase-description">
+        Style websites with colors, layouts,
+        spacing, shadows, and responsive design.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>Colors & typography</li>
+          <li>Flexbox & layouts</li>
+          <li>Spacing & alignment</li>
+          <li>Responsive design</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Project: Styled Student Portal Website
+      </div>
+
+    </div>
+
+    <!-- Phase 3 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        ⚡
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 3 - JavaScript
+      </h2>
+
+      <p class="webdev-phase-description">
+        Make websites interactive using JavaScript
+        with buttons, logic, and dynamic features.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>Variables & functions</li>
+          <li>DOM manipulation</li>
+          <li>Events & conditions</li>
+          <li>User interactions</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Projects: Todo App, Calculator, Quiz App
+      </div>
+
+    </div>
+
+    <!-- Phase 4 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        🤖
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 4 - Modern JS & AI
+      </h2>
+
+      <p class="webdev-phase-description">
+        Learn ES6 JavaScript and build AI-powered
+        applications using Gemini API.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>ES6 concepts</li>
+          <li>API integration</li>
+          <li>Fetch & async JS</li>
+          <li>AI content generation</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Project: AI Content Generator
+      </div>
+
+    </div>
+
+    <!-- Phase 5 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        🚀
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 5 - Backend Development
+      </h2>
+
+      <p class="webdev-phase-description">
+        Build backend servers using Node.js,
+        Express.js, and Gemini AI integration.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>Node.js basics</li>
+          <li>Express.js server</li>
+          <li>REST APIs</li>
+          <li>Frontend & backend connection</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Project: Full Stack AI Web App
+      </div>
+
+    </div>
+
+    <!-- Phase 6 -->
+
+    <div class="webdev-phase-card">
+
+      <div class="webdev-phase-icon">
+        💾
+      </div>
+
+      <h2 class="webdev-phase-title">
+        Phase 6 - MongoDB & Mongoose
+      </h2>
+
+      <p class="webdev-phase-description">
+        Learn databases, data storage,
+        and backend data management systems.
+      </p>
+
+      <div class="webdev-skill-box">
+
+        <h3 class="webdev-skill-title">
+          Skills Learned
+        </h3>
+
+        <ul>
+          <li>MongoDB database</li>
+          <li>Mongoose schemas</li>
+          <li>CRUD operations</li>
+          <li>Store & manage data</li>
+        </ul>
+
+      </div>
+
+      <div class="webdev-project-box">
+        Project: Student Feedback Manager
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="fashion-main-section" id="SOSC">
+
+  <!-- Heading -->
+
+  <h1 class="fashion-main-title">
+    Fashion Design Curriculum
+  </h1>
+
+  <p class="fashion-main-subtitle">
+    Learn creative fashion skills from sketching to styling
+    through practical design projects.
+  </p>
+
+  <!-- Grid -->
+
+  <div class="fashion-grid">
+
+    <!-- Card 1 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        👗
+      </div>
+
+      <h2 class="fashion-title">
+        Fashion Basics
+      </h2>
+
+      <p class="fashion-text">
+        Understand colors, fabrics,
+        and fashion design principles.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Color Theory</li>
+          <li>Fabric Knowledge</li>
+          <li>Fashion Concepts</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 2 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        ✏️
+      </div>
+
+      <h2 class="fashion-title">
+        Fashion Sketching
+      </h2>
+
+      <p class="fashion-text">
+        Learn figure drawing
+        and garment illustrations.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Figure Drawing</li>
+          <li>Garment Sketches</li>
+          <li>Illustration</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 3 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        🧵
+      </div>
+
+      <h2 class="fashion-title">
+        Textile Design
+      </h2>
+
+      <p class="fashion-text">
+        Explore fabrics,
+        patterns, and textures.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Fabric Selection</li>
+          <li>Textile Patterns</li>
+          <li>Print Design</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 4 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        📐
+      </div>
+
+      <h2 class="fashion-title">
+        Pattern Making
+      </h2>
+
+      <p class="fashion-text">
+        Create garment patterns
+        and body measurements.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Pattern Drafting</li>
+          <li>Measurements</li>
+          <li>Cutting</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 5 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        🪡
+      </div>
+
+      <h2 class="fashion-title">
+        Garment Construction
+      </h2>
+
+      <p class="fashion-text">
+        Learn stitching,
+        sewing, and finishing.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Sewing</li>
+          <li>Machine Handling</li>
+          <li>Finishing</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Card 6 -->
+
+    <div class="fashion-card">
+
+      <div class="fashion-icon">
+        🌟
+      </div>
+
+      <h2 class="fashion-title">
+        Styling & Portfolio
+      </h2>
+
+      <p class="fashion-text">
+        Build your portfolio
+        and styling projects.
+      </p>
+
+      <div class="fashion-skill-box">
+
+        <h3 class="fashion-skill-title">
+          Skills
+        </h3>
+
+        <ul>
+          <li>Fashion Styling</li>
+          <li>Portfolio Design</li>
+          <li>Brand Presentation</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+    <div class="career-main-container" id="School-of-Business">
+      <!-- Heading -->
+
+      <h1 class="career-main-title">Complete Business Career Curriculum</h1>
+
+      <p class="career-main-subtitle">
+        Learn business tools, CRM systems, marketing, analytics, and Python to
+        build a successful modern career.
+      </p>
+
+      <!-- Grid -->
+
+      <div class="career-course-grid">
+        <!-- Course 1 -->
+
+        <div class="career-course-card">
+          <div class="career-course-icon">📊</div>
+
+          <h2 class="career-course-heading">Google Sheet</h2>
+
+          <p class="career-course-description">
+            Learn Google Sheets for reports, dashboards, automation, and
+            business data management.
+          </p>
+
+          <!-- Module -->
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Basic Google Sheets</h3>
+
+            <div class="career-section-title">Skills</div>
+
+            <ul>
+              <li>Data formatting</li>
+              <li>SUM, AVERAGE, COUNT</li>
+              <li>Charts & visualizations</li>
+            </ul>
+
+            <div class="career-section-title">Applications</div>
+
+            <ul>
+              <li>Track sales & expenses</li>
+              <li>Create reports</li>
+            </ul>
+          </div>
+
+          <!-- Module -->
+
+
+          
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Advanced Sheets</h3>
+
+            <div class="career-section-title">Skills</div>
+
+            <ul>
+              <li>Pivot Tables</li>
+              <li>VLOOKUP</li>
+              <li>Dashboards</li>
+              <li>Automation</li>
+            </ul>
+          </div>
+
+          <div class="career-salary-box">Salary: ₹12K – ₹35K</div>
+
+          <div class="career-company-box">
+            Companies: TCS, Wipro, Infosys, Accenture
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+
+        <div class="career-course-card">
+          <div class="career-course-icon">💼</div>
+
+          <h2 class="career-course-heading">CRM & Salesforce</h2>
+
+          <p class="career-course-description">
+            Learn customer relationship management, sales pipelines, reporting,
+            and support systems.
+          </p>
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Sales & CRM</h3>
+
+            <ul>
+              <li>CRM fundamentals</li>
+              <li>Sales funnel</li>
+              <li>Customer lifecycle</li>
+            </ul>
+          </div>
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Salesforce Tools</h3>
+
+            <ul>
+              <li>Lead management</li>
+              <li>Task assignments</li>
+              <li>Reports & dashboards</li>
+              <li>Customer service tracking</li>
+            </ul>
+          </div>
+
+          <div class="career-salary-box">Salary: ₹18K – ₹50K</div>
+
+          <div class="career-company-box">
+            Companies: Salesforce, Zoho, TCS, Infosys
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+
+        <div class="career-course-card">
+          <div class="career-course-icon">📱</div>
+
+          <h2 class="career-course-heading">Digital Marketing</h2>
+
+          <p class="career-course-description">
+            Master SEO, ads, branding, analytics, and social media marketing.
+          </p>
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Marketing Skills</h3>
+
+            <ul>
+              <li>SEO & keywords</li>
+              <li>Google Ads</li>
+              <li>Facebook Ads</li>
+              <li>Content planning</li>
+            </ul>
+          </div>
+
+          <div class="career-module-box">
+            <h3 class="career-module-title">Tools & Analytics</h3>
+
+            <ul>
+              <li>WordPress / Wix</li>
+              <li>Google Analytics</li>
+              <li>Traffic analysis</li>
+            </ul>
+          </div>
+
+          <div class="career-salary-box">Salary: ₹10K – ₹1L+</div>
+
+          <div class="career-company-box">
+            Companies: Google, Meta, Amazon, Flipkart
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+
+
+  </body>
+  <style>
+    .career-main-container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    /* Heading */
+
+    .career-main-title {
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+      color: #162447;
+      margin-bottom: 15px;
+    }
+
+    .career-main-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    /* Grid */
+
+    .career-course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    /* Card */
+
+    .career-course-card {
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      border-top: 8px solid #4da6ff;
+    }
+
+    .career-course-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Icon */
+
+    .career-course-icon {
+      width: 75px;
+      height: 75px;
+      border-radius: 18px;
+      background: #edf5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 22px;
+    }
+
+    /* Title */
+
+    .career-course-heading {
+      font-size: 30px;
+      color: #162447;
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
+
+    .career-course-description {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    /* Module */
+
+    .career-module-box {
+      background: #f8fbff;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 18px;
+      border: 1px solid #dbe8ff;
+    }
+
+    .career-module-title {
+      font-size: 20px;
+      color: #163172;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .career-section-title {
+      font-size: 16px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+      color: #1f4068;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* Salary */
+
+    .career-salary-box {
+      background: #edf8ef;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 18px;
+      color: #2d6a4f;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    /* Companies */
+
+    .career-company-box {
+      background: #fff6e9;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 12px;
+      color: #8a5a00;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .career-main-title {
+        font-size: 34px;
+      }
+
+      .career-course-heading {
+        font-size: 25px;
+      }
+    }
+
+
+
+
+
+
+
+    .fashion-main-section{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Heading */
+
+    .fashion-main-title{
+      text-align:center;
+      font-size:48px;
+      color:#162447;
+      margin-bottom:15px;
+      font-weight:bold;
+    }
+
+    .fashion-main-subtitle{
+      text-align:center;
+      color:#666;
+      font-size:17px;
+      line-height:1.7;
+      margin-bottom:55px;
+    }
+
+    /* Grid */
+
+    .fashion-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    /* Card */
+
+    .fashion-card{
+      background:white;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      border-top:7px solid #4da6ff;
+      transition:0.3s;
+    }
+
+    .fashion-card:hover{
+      transform:translateY(-8px);
+    }
+
+    /* Icon */
+
+    .fashion-icon{
+      width:70px;
+      height:70px;
+      border-radius:18px;
+      background:#edf5ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      margin-bottom:20px;
+    }
+
+    /* Title */
+
+    .fashion-title{
+      font-size:26px;
+      color:#162447;
+      margin-bottom:14px;
+      font-weight:bold;
+    }
+
+    /* Text */
+
+    .fashion-text{
+      color:#666;
+      line-height:1.7;
+      font-size:15px;
+      margin-bottom:18px;
+    }
+
+    /* Skills */
+
+    .fashion-skill-box{
+      background:#f8fbff;
+      border:1px solid #dbe8ff;
+      border-radius:14px;
+      padding:15px;
+    }
+
+    .fashion-skill-title{
+      color:#163172;
+      font-size:17px;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    ul{
+      padding-left:18px;
+      color:#555;
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      body{
+        padding:20px;
+      }
+
+      .fashion-main-title{
+        font-size:34px;
+      }
+
+    }
+  </style>
+</html>
