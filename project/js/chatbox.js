@@ -24,9 +24,6 @@ btn.addEventListener("click", function() {
                     },
 
                     body: JSON.stringify({
-                        content: {
-                            5
-                        }
                     })
                 }
             )
