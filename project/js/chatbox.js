@@ -24,6 +24,15 @@ btn.addEventListener("click", function() {
                     },
 
                     body: JSON.stringify({
+                        content: [
+                            {
+                                parts: [
+                                    {
+                                        text: `give me answer 3 to 4 line ${store}`
+                                    }
+                                ]
+                            }
+                        ]
                     })
                 }
             )
