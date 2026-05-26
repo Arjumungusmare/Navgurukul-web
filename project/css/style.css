@@ -246,14 +246,6 @@ header img {
     transform: scale(1.03);
 }
 
-/* =========================
-   FEEDBACK + CONTACT
-========================= */
-
-/* =========================
-   RATING
-========================= */
-
 .rating-box {
     margin-bottom: 30px;
 }
@@ -600,6 +592,7 @@ header img {
         0 15px 30px rgba(37, 99, 235, 0.25);
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -792,12 +785,9 @@ footer {
 .houses-section::after {
 
     content: "";
-
     position: absolute;
-
     width: 350px;
     height: 350px;
-
     border-radius: 50%;
 
     background: rgba(37, 99, 235, 0.06);
@@ -1519,15 +1509,21 @@ body {
 /* =========================
    TEAM PAGE CSS
 ========================= */
+/* =========================
+   TEAM PAGE CSS
+========================= */
 
 .team-page {
     padding: 120px 8% 80px;
     min-height: 100vh;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: #f8fafc;
+    color: #111827;
+    display: block;
 }
 
-/* HEADING */
+/* =========================
+   HEADING
+========================= */
 
 .team-heading {
     text-align: center;
@@ -1552,29 +1548,33 @@ body {
     max-width: 850px;
     margin: auto;
     line-height: 1.8;
-    color: var(--light-text);
     font-size: 1rem;
+    color: #4b5563;
 }
 
-/* GRID */
+/* =========================
+   TEAM GRID
+========================= */
 
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 
 .team-card {
-    background: var(--card-bg);
+    background: white;
     border-radius: 20px;
     overflow: hidden;
     padding: 25px;
     transition: 0.4s ease;
     position: relative;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .team-card:hover {
@@ -1582,87 +1582,66 @@ body {
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
 }
 
-.team-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg,
-            rgba(0, 188, 212, 0.08),
-            transparent);
-    pointer-events: none;
-}
-
-/* IMAGE */
+/* =========================
+   IMAGE
+========================= */
 
 .team-image {
     width: 100%;
     height: 320px;
     overflow: hidden;
     border-radius: 15px;
-    margin-bottom: 20px;
+    background: #f5f5f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
+    object-fit: contain;
+    transition: 0.5s ease;
 }
 
 .team-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
-/* CONTENT */
+/* =========================
+   CONTENT
+========================= */
+
+.team-content {
+    margin-top: 20px;
+}
 
 .team-content h2 {
     font-size: 1.5rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    color: #111827;
 }
 
 .team-role {
     color: #00bcd4;
     font-weight: 600;
-    margin-bottom: 15px;
     display: inline-block;
+    margin-bottom: 15px;
 }
 
 .team-content p {
     line-height: 1.7;
-    color: var(--light-text);
     font-size: 0.95rem;
+    color: #4b5563;
 }
 
-/* SOCIAL */
-
-.team-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.team-social a {
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 188, 212, 0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #00bcd4;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.team-social a:hover {
-    background: #00bcd4;
-    color: white;
-    transform: translateY(-4px);
-}
-
-/* ANIMATION */
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes fadeUp {
+
     from {
         opacity: 0;
         transform: translateY(40px);
@@ -1674,9 +1653,18 @@ body {
     }
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:768px) {
+@media (max-width: 992px) {
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
 
     .team-page {
         padding: 100px 5% 60px;
@@ -1684,6 +1672,10 @@ body {
 
     .team-heading h1 {
         font-size: 2.2rem;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
     }
 
     .team-image {
